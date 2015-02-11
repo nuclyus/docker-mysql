@@ -39,6 +39,9 @@ EXPOSE 3306
 # Execute mysql as user mysql
 USER mysql
 
+# Make sure docker subs have access
+GRANT SELECT  ON *.* TO user@'172.17.%' IDENTIFIED BY '95k(77z{G2S*R7J';
+
 # Define default command.
 CMD ["/usr/bin/mysqld_safe"]
 
